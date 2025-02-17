@@ -1,0 +1,19 @@
+# Ignorar pastas do VS Code
+.vscode/
+*.code-workspace
+
+# Ignorar arquivos do ambiente virtual Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos do sistema (Windows e macOS)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar arquivos temporários do OneDrive
+*.lnk
+*.tmp
