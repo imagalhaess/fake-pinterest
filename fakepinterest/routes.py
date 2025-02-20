@@ -11,3 +11,4 @@ def homepage():
 @login_required
 def perfil(usuario):
    return render_template('perfil.html', usuario=usuario)
+
