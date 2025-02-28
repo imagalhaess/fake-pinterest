@@ -1,6 +1,7 @@
 # criar os formulários do projeto
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, FileField
+from wtforms import StringField, PasswordField, SubmitField
+from flask_wtf.file import FileField, FileAllowed
 from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
 from fakepinterest.models import Usuario
 
@@ -23,5 +24,5 @@ class FormCriarConta(FlaskForm):
             return ValidationError('E-mail já cadastrado. Tente outro.')
 
 class FormFoto(FlaskForm):
-    foto = FileField('Foto', validators=[DataRequired()])
+    foto = FileField('Foto', validators=[DataRequired(), FileAllowed(['jpg', 'png', 'jpeg'], 'Somente imagens são permitidas.')])
     botao_confirmacao = SubmitField('Enviar')

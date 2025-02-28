@@ -5,7 +5,8 @@
 
   {% if form %}
   <form method="POST" enctype="multipart/form-data">
-    {{ form.crsf_token }} {{ form.foto() }} {{ form.botao_confirmacao() }}
+    {{ form.hidden_tag() }} {{ form.crsf_token }} {{ form.foto() }} {{
+    form.botao_confirmacao() }}
   </form>
   {% endif %}
 
