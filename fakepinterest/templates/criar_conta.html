@@ -6,4 +6,7 @@ endblock %} {% block formulario %}
   form.senha() }} {{ form.confirmacao_senha.label() }} {{
   form.confirmacao_senha() }} {{ form.botao_confirmacao() }}
 </form>
+<a href="{{ url_for('homepage.html')}}"
+  >Já possui uma conta? Clique aqui para fazer login</a
+>
 {% endblock %}
