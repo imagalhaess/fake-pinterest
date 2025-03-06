@@ -81,7 +81,11 @@
 
           <div class="div-botao">
             {{ form.botao_confirmacao(class="botao-login") }}
-            <a href="{{ url_for('criar_conta') }}" class="link-criarconta"
+            <a
+              href="{{ url_for('criar_conta') }}"
+              class="link-criarconta"
+              ,
+              style="text-decoration: underline"
               >Não tem uma conta? Crie aqui</a
             >
           </div>
